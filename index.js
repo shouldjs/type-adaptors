@@ -83,8 +83,7 @@ TypeAdaptorStorage.prototype = {
 
 export var defaultTypeAdaptorStorage = new TypeAdaptorStorage();
 
-// default for objects
-defaultTypeAdaptorStorage.addType(new t.Type(t.OBJECT), {
+var objectAdaptor = {
   forEach: function(obj, f, context) {
     for (var prop in obj) {
       if (hasOwnProperty(obj, prop) && propertyIsEnumerable(obj, prop)) {
@@ -106,7 +105,11 @@ defaultTypeAdaptorStorage.addType(new t.Type(t.OBJECT), {
   iterator: function(obj) {
     return new ObjectIterator(obj);
   }
-});
+};
+
+// default for objects
+defaultTypeAdaptorStorage.addType(new t.Type(t.OBJECT), objectAdaptor);
+defaultTypeAdaptorStorage.addType(new t.Type(t.FUNCTION), objectAdaptor);
 
 var mapAdaptor = {
   has: function(obj, key) {
