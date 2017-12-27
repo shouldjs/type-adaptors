@@ -1,6 +1,6 @@
 {
   "name": "should-type-adaptors",
-  "version": "1.0.1",
+  "version": "1.1.0",
   "description": "Small utility functions to use the same traversing etc code on different types",
   "main": "cjs/should-type-adaptors.js",
   "jsnext:main": "es6/should-type-adaptors.js",
