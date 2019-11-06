@@ -9,7 +9,7 @@
     "should-util": "^1.0.0"
   },
   "devDependencies": {
-    "eslint": "^3.2.2",
+    "eslint": "^6.6.0",
     "eslint-config-shouldjs": "^1.0.2",
     "rollup": "^0.34.7"
   },
